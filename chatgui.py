@@ -87,6 +87,7 @@ def send():
 
 base = Tk()
 base.title("ABC Campus Chat bot")
+base.configure(bg="#2c3e50")
 base.geometry("440x590")
 base.resizable(width=FALSE, height=FALSE)
 
