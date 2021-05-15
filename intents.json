@@ -1,22 +1,22 @@
 {"intents": [
-  {"tag": "morning",
-   "patterns": ["Good morning","morning","Very good morning", "Good morning to you", "Hello good monring", "Hi good morning"],
-   "responses": ["Good morning how can I help you?", "Good morning what can i do for you?", "Hi there, how can I help?", "Hi there, What can I do for you?", "Hi there, Good morning! what can I do for you ?", "Hi there, Good morning! How can I help you?"],
-   "context": [""]
-  },
+ {"tag": "morning",
+  "patterns": ["Good morning","morning","Very good morning", "Good morning to you", "Hello good monring", "Hi good morning", "Goog monrning is any one there?", "morning is anyone there?"],
+  "responses": ["Good morning how can I help you?", "Good morning what can i do for you?", "Hi there, how can I help?", "Hi there, What can I do for you?", "Hi there, Good morning! what can I do for you ?", "Hi there, Good morning! How can I help you?"],
+  "context": [""]
+ },
+ {"tag": "evening",
+  "patterns": ["Good evening","evening", "Very good evening", ""],
+  "responses": ["Good evening","Good evening! how can i help you in this pleasant evening"],
+  "context": [""]
+ },
+ {"tag": "greeting",
+  "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","What's up", "Hello"],
+  "responses": ["Hello! Welcome to ABC Campus","Good to see you again", "Hi there, how can I help?"],
+  "context": [""]
+ },
   {"tag": "night",
    "patterns": ["Good night","night"],
    "responses": ["Good night! glad i","Good night! hope to see you soon"],
-   "context": [""]
-  },
- {"tag": "evening",
-   "patterns": ["Good evening","evening"],
-   "responses": ["Good evening","Good evening! how can i help you in this pleasant evening"],
-   "context": [""]
-  },
-  {"tag": "greeting",
-   "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","What's up", "Hello"],
-   "responses": ["Hello! Welcome to ABC Campus","Good to see you again", "Hi there, how can I help?"],
    "context": [""]
   },
   {"tag": "goodbye",
