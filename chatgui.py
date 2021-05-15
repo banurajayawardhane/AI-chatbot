@@ -67,7 +67,6 @@ def chatbot_response(msg):
 import tkinter
 from tkinter import *
 
-
 def send():
     msg = EntryBox.get("1.0",'end-1c').strip()
     EntryBox.delete("0.0",END)
@@ -84,14 +83,11 @@ def send():
         ChatLog.config(state=DISABLED)
         ChatLog.yview(END)
 
-
 base = Tk()
 base.title("ABC Campus Chat bot")
 base.configure(bg="#2c3e50")
 base.geometry("440x590")
 base.resizable(width=FALSE, height=FALSE)
-
-
 
 #Create Chat window
 ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Arial", fg="black")
@@ -99,7 +95,7 @@ ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Arial", fg=
 ChatLog.config(state=DISABLED)
 
 #Bind scrollbar to Chat window
-scrollbar = Scrollbar(base, command=ChatLog.yview, cursor="heart")
+scrollbar = Scrollbar(base, command=ChatLog.yview, cursor="heart", background="blue")
 ChatLog['yscrollcommand'] = scrollbar.set
 
 #Create Button to send message
@@ -110,9 +106,6 @@ SendButton = Button(base, font=("Verdana",12,'bold'), text="Send", width="10", h
 #Create the box to enter message
 EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Arial", fg='black')
 #EntryBox.bind("<Return>", send)
-
-
-
 
 #Place all components on the screen
 scrollbar.place(x=415,y=6, height=530)
