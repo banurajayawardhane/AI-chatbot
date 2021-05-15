@@ -1,73 +1,72 @@
 {"intents": [
-
   {"tag": "morning",
-         "patterns": ["Good morning","morning"],
-         "responses": ["Good morning how can I help you?","Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-
+   "patterns": ["Good morning","morning","Very good morning", "Good morning to you", "Hello good monring", "Hi good morning"],
+   "responses": ["Good morning how can I help you?", "Good morning what can i do for you?", "Hi there, how can I help?", "Hi there, What can I do for you?", "Hi there, Good morning! what can I do for you ?", "Hi there, Good morning! How can I help you?"],
+   "context": [""]
+  },
   {"tag": "night",
-         "patterns": ["Good night","night"],
-         "responses": ["Good night","Good night! hope to see you soon"],
-         "context": [""]
-        },
-   {"tag": "evening",
-         "patterns": ["Good evening","evening"],
-         "responses": ["Good evening","Good evening! how can i help you in this pleasant evening"],
-         "context": [""]
-        },
+   "patterns": ["Good night","night"],
+   "responses": ["Good night","Good night! hope to see you soon"],
+   "context": [""]
+  },
+ {"tag": "evening",
+   "patterns": ["Good evening","evening"],
+   "responses": ["Good evening","Good evening! how can i help you in this pleasant evening"],
+   "context": [""]
+  },
+  {"tag": "greeting",
+   "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","What's up", "Hello"],
+   "responses": ["Hello! Welcome to ABC Campus","Good to see you again", "Hi there, how can I help?"],
+   "context": [""]
+  },
+  {"tag": "goodbye",
+   "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time", "Bye-bye!"],
+   "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+   "context": [""]
+  },
+  {"tag": "thanks",
+   "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+   "responses": ["Happy to help!", "Any time!", "My pleasure","thank you for choosing ABC campus"],
+   "context": [""]
+  },
+  {"tag": "noanswer",
+   "patterns": [""],
+   "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+   "context": [""]
+  },
+
+  {"tag": "options",
+   "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+   "responses": ["I can guide you through   1.Course Details   2.Course Registration     3.Payment facilities    4.Contact & Branch Information "],
+   "context": [""]
+  },
+  {"tag": "Course-registration",
+   "patterns": ["What is the procedure of application?", "How do I apply?", "Is there a possibility to change the courses I have registered on a later date?", "When will registering of New students happen", "When is the registration deadline ?","When can I register ?","Register for a course","Course registration","How can I register for courses?"],
+   "responses": ["You can Register via Online or By visiting the nearest ABC Campus, What do You prefer?"],
+   "context": ["Course-registration-online", "Course-registration-physical"]
+  },
+  {"tag": "Course-registration-online",
+   "patterns": ["How do I apply online?", "Apply online", "Online application", "Online registration deadline?", "How can I register online?", "Online registration" ],
+   "responses": ["Visit -www.ABCcampus.lk/courses/registration- to Register to your preferred course via online "],
+   "context": [""]
+  },
+  {"tag": "Course-registration-physical",
+   "patterns": ["on campus registration", "Physical registration", "Register by visiting campus" ],
+   "responses": ["On campus registration are open for students from 10am to 4pm on every working day. Please visit the nearest campus to start following your dream."],
+   "context": [""]
+  },
+  {"tag": "payment-methods",
+   "patterns": ["Pay","payment","how ca I pay?","What are the types of banks available for bank account transfer?","Do you accept debit cards?","Do you accept credit cards?","Can I pay on an annual basis?","Is money refunded after payment if a problem occurs?","I have an foreign credit card, is foreign credit card payments acceptable?","What are the payment options available?","What are the payment methods?"],
+   "responses": ["You can make your payment Online Or by visiting Our Nearest ABC Campus. What do you prefer?"],
+   "context": ["payment-methods-online","payment-methods-physical"]
+  },
+  {"tag": "payment-methods-online",
+   "patterns": [" pay online", "What are the online payment methods?", "Is there a specific page to make payments?", "online payment" ],
+   "responses": ["You can pay the relevant amount by Visa/Master Debit or Credit card by simply visiting -www.ABCcampus.lk/payments- .  "],
+   "context": [""]
+  },
 
 
-        {"tag": "greeting",
-         "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","What's up"],
-         "responses": ["Hello! Welcome to ABC Campus","Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time", "Bye-bye!"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure","thank you for choosing ABC campus"],
-         "context": [""]
-        },
-        {"tag": "noanswer",
-         "patterns": [""],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-         "context": [""]
-        },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through   1.Course Details   2.Course Registration     3.Payment facilities    4.Contact & Branch Information "],
-         "context": [""]
-        },
-        {"tag": "Course-registration",
-         "patterns": ["What is the procedure of application?", "How do I apply?", "Is there a possibility to change the courses I have registered on a later date?", "When will registering of New students happen", "When is the registration deadline ?","When can I register ?","Register for a course","Course registration","How can I register for courses?"],
-         "responses": ["You can Register via Online or By visiting the nearest ABC Campus, What do You prefer?"],
-         "context": ["Course-registration-online", "Course-registration-physical"]
-        },
-        {"tag": "Course-registration-online",
-         "patterns": ["How do I apply online?", "Apply online", "Online application", "Online registration deadline?", "How can I register online?", "Online registration" ],
-         "responses": ["Visit -www.ABCcampus.lk/courses/registration- to Register to your preferred course via online "],
-         "context": [""]
-        },
-        {"tag": "Course-registration-physical",
-         "patterns": ["on campus registration", "Physical registration", "Register by visiting campus" ],
-         "responses": ["On campus registration are open for students from 10am to 4pm on every working day. Please visit the nearest campus to start following your dream."],
-         "context": [""]
-        },
-        {"tag": "payment-methods",
-         "patterns": ["Pay","payment","how ca I pay?","What are the types of banks available for bank account transfer?","Do you accept debit cards?","Do you accept credit cards?","Can I pay on an annual basis?","Is money refunded after payment if a problem occurs?","I have an foreign credit card, is foreign credit card payments acceptable?","What are the payment options available?","What are the payment methods?"],
-         "responses": ["You can make your payment Online Or by visiting Our Nearest ABC Campus. What do you prefer?"],
-         "context": ["payment-methods-online","payment-methods-physical"]
-        },
-        {"tag": "payment-methods-online",
-         "patterns": [" pay online", "What are the online payment methods?", "Is there a specific page to make payments?", "online payment" ],
-         "responses": ["You can pay the relevant amount by Visa/Master Debit or Credit card by simply visiting -www.ABCcampus.lk/payments- .  "],
-         "context": [""]
-        },
         {"tag": "payment-methods-physical",
          "patterns": ["on campus payments","physical payments"],
          "responses": ["On campus Payment option is open for students from 10am to 4pm on every working day. Students can pay the relevant amount by Cash or Debit & Credit cards."],

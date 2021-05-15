@@ -67,57 +67,137 @@ def chatbot_response(msg):
 import tkinter
 from tkinter import *
 
+BG_GRAY = "#27496d"
+BG_COLOR = "#142850"
+TEXT_COLOR = "#dae1e7"
 
-def send():
-    msg = EntryBox.get("1.0",'end-1c').strip()
-    EntryBox.delete("0.0",END)
-
-    if msg != '':
-        ChatLog.config(state=NORMAL)
-        ChatLog.insert(END, "You: " + msg + '\n\n')
-        ChatLog.config(foreground="#0077fd", font=("Verdana", 12 ))
-
-        res = chatbot_response(msg)
-        ChatLog.insert(END, "Bot: " + res + '\n\n')
+FONT = "Roboto 14"
+FONT_BOLD = "Roboto 14 bold"
 
 
-        ChatLog.config(state=DISABLED)
-        ChatLog.yview(END)
+class ChatApplication:
+
+    def __init__(self):
+        self.window = Tk()
+        self._setup_main_window()
+
+    def run(self):
+        self.window.mainloop()
+
+    def _setup_main_window(self):
+        self.window.title("ABC Insititute Chatbot")
+        self.window.resizable(width=False, height=False)
+        self.window.configure(width=470, height=550, bg=BG_COLOR)
+
+        # head label
+        head_label = Label(self.window, bg=BG_COLOR, fg=TEXT_COLOR,
+                           text="Welcome to the ABC Institute Chatbot", font=FONT_BOLD, pady=10)
+        head_label.place(relwidth=1)
+
+        # tiny divider
+        line = Label(self.window, width=450, bg=BG_GRAY)
+        line.place(relwidth=1, rely=0.07, relheight=0.012)
+
+        # text widget
+        self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_COLOR,
+                                font=FONT, padx=10, pady=10)
+        self.text_widget.place(relheight=0.85, relwidth=1, rely=0.08)
+        self.text_widget.configure(cursor="arrow", state=DISABLED)
+
+        # scroll bar
+        # scrollbar = Scrollbar(self.text_widget)
+        # scrollbar.place(relheight=1, relx=0.974)
+        # scrollbar.configure(command=self.text_widget.yview)
+
+        # bottom label
+        bottom_label = Label(self.window, bg=BG_GRAY, height=40)
+        bottom_label.place(relwidth=1, rely=0.9)
+
+        # message entry box
+        self.msg_entry = Entry(bottom_label, bg="#2C3E50", fg=TEXT_COLOR, font=FONT)
+        self.msg_entry.place(relwidth=0.74, relheight=0.06, rely=0.008, relx=0.011)
+        self.msg_entry.focus()
+        self.msg_entry.bind("<Return>", self._on_enter_pressed)
+
+        # send button
+        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GRAY,
+                             command=lambda: self._on_enter_pressed(None))
+        send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
+
+    def _on_enter_pressed(self, event):
+        msg = self.msg_entry.get()
+        self._insert_message(msg, "You")
+
+    def _insert_message(self, msg, sender):
+        if not msg:
+            return
+
+        self.msg_entry.delete(0, END)
+        msg1 = f"{sender}: {msg}\n\n"
+        self.text_widget.configure(state=NORMAL)
+        self.text_widget.insert(END, msg1)
+        self.text_widget.configure(state=DISABLED)
+
+        msg2 = f"ABC Bot : {chatbot_response(msg)}\n\n"
+        self.text_widget.configure(state=NORMAL)
+        self.text_widget.insert(END, msg2)
+        self.text_widget.configure(state=DISABLED)
+
+        self.text_widget.see(END)
 
 
-base = Tk()
-base.title("ABC Campus Chat bot")
-base.configure(bg="#2c3e50")
-base.geometry("440x590")
-base.resizable(width=FALSE, height=FALSE)
+if __name__ == "__main__":
+    app = ChatApplication()
+    app.run()
 
-
-
-#Create Chat window
-ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Arial", fg="black")
-
-ChatLog.config(state=DISABLED)
-
-#Bind scrollbar to Chat window
-scrollbar = Scrollbar(base, command=ChatLog.yview, cursor="heart")
-ChatLog['yscrollcommand'] = scrollbar.set
-
-#Create Button to send message
-SendButton = Button(base, font=("Verdana",12,'bold'), text="Send", width="10", height=5,
-                    bd=0, bg="#0077fd", activebackground="#3d82e9",fg='black',
-                    command= send )
-
-#Create the box to enter message
-EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Arial", fg='black')
-#EntryBox.bind("<Return>", send)
-
-
-
-
-#Place all components on the screen
-scrollbar.place(x=415,y=6, height=530)
-ChatLog.place(x=6,y=6, height=530, width=420)
-EntryBox.place(x=6, y=542, height=40, width=310)
-SendButton.place(x=320, y=542, height=40)
-
-base.mainloop()
+# def send():
+#     msg = EntryBox.get("1.0",'end-1c').strip()
+#     EntryBox.delete("0.0",END)
+# 
+#     ChatLog.config(state=NORMAL)
+#     ChatLog.insert(END, "You: " + msg + '\n\n')
+#     ChatLog.config(foreground="#0077fd", font=("Roboto", 14))
+# 
+#     res = chatbot_response(msg)
+#     ChatLog.insert(END, "ABC Bot: " + res + '\n\n')
+# 
+#     ChatLog.config(state=DISABLED)
+#     ChatLog.yview(END)
+# 
+# 
+# base = Tk()
+# base.title("ABC Campus Chat Bot")
+# base.configure(bg="#2c3e50")
+# base.geometry("440x590")
+# base.resizable(width=FALSE, height=FALSE)
+# 
+# 
+# 
+# #Create Chat window
+# ChatLog = Text(base, bd=0, bg="white", height="8", width="50", font="Roboto", fg="black")
+# 
+# ChatLog.config(state=DISABLED)
+# 
+# #Bind scrollbar to Chat window
+# scrollbar = Scrollbar(base, command=ChatLog.yview, cursor="heart")
+# ChatLog['yscrollcommand'] = scrollbar.set
+# 
+# #Create Button to send message
+# SendButton = Button(base, font=("Verdana",12,'bold'), text="Send", width="10", height=5,
+#                     bd=0, bg="#0077fd", activebackground="#3d82e9",fg='black',
+#                     command= send )
+# 
+# #Create the box to enter message
+# EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Arial", fg='black')
+# # EntryBox.bind("<Return>", send)
+# 
+# 
+# 
+# 
+# #Place all components on the screen
+# scrollbar.place(x=415,y=6, height=530)
+# ChatLog.place(x=6,y=6, height=530, width=420)
+# EntryBox.place(x=6, y=542, height=40, width=310)
+# SendButton.place(x=320, y=542, height=40)
+# 
+# base.mainloop()
