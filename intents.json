@@ -6,7 +6,7 @@
   },
   {"tag": "night",
    "patterns": ["Good night","night"],
-   "responses": ["Good night","Good night! hope to see you soon"],
+   "responses": ["Good night! glad i","Good night! hope to see you soon"],
    "context": [""]
   },
  {"tag": "evening",

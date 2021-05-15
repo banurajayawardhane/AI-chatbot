@@ -87,41 +87,38 @@ class ChatApplication:
     def _setup_main_window(self):
         self.window.title("ABC Insititute Chatbot")
         self.window.resizable(width=False, height=False)
-        self.window.configure(width=470, height=550, bg=BG_COLOR)
+        self.window.configure(width=480, height=660, bg="#1b262c")
 
         # head label
-        head_label = Label(self.window, bg=BG_COLOR, fg=TEXT_COLOR,
-                           text="Welcome to the ABC Institute Chatbot", font=FONT_BOLD, pady=10)
+        head_label = Label(self.window, bg="#1b262c", fg="#bbe1fa", text="Welcome to the ABC Institute Chatbot", font=FONT_BOLD, pady=10)
         head_label.place(relwidth=1)
 
         # tiny divider
-        line = Label(self.window, width=450, bg=BG_GRAY)
-        line.place(relwidth=1, rely=0.07, relheight=0.012)
+        line = Label(self.window, width=450, bg="#bbe1fa")
+        line.place(relwidth=1, rely=0.07, relheight=0.1)
 
         # text widget
-        self.text_widget = Text(self.window, width=20, height=2, bg=BG_COLOR, fg=TEXT_COLOR,
-                                font=FONT, padx=10, pady=10)
-        self.text_widget.place(relheight=0.85, relwidth=1, rely=0.08)
+        self.text_widget = Text(self.window, width=20, height=2, bg="#1b262c", fg="#bbe1fa",font=FONT, padx=10, pady=15, bd=0)
+        self.text_widget.place(relheight=0.90, relwidth=1, rely=0.075)
         self.text_widget.configure(cursor="arrow", state=DISABLED)
 
         # scroll bar
-        # scrollbar = Scrollbar(self.text_widget)
-        # scrollbar.place(relheight=1, relx=0.974)
-        # scrollbar.configure(command=self.text_widget.yview)
+        scrollbar = Scrollbar(self.text_widget, activebackground="#3282b8", width=10, bg="#0f4c75")
+        scrollbar.place(relheight=1, relx=1)
+        scrollbar.configure(command=self.text_widget.yview)
 
         # bottom label
-        bottom_label = Label(self.window, bg=BG_GRAY, height=40)
+        bottom_label = Label(self.window, bg="#1b262c", height=40)
         bottom_label.place(relwidth=1, rely=0.9)
 
         # message entry box
-        self.msg_entry = Entry(bottom_label, bg="#2C3E50", fg=TEXT_COLOR, font=FONT)
-        self.msg_entry.place(relwidth=0.74, relheight=0.06, rely=0.008, relx=0.011)
+        self.msg_entry = Entry(bottom_label, bg="#bbe1fa", fg="#0f4c75", font=FONT, relief=FLAT)
+        self.msg_entry.place(relwidth=0.74, relheight=0.06, rely=0.008, relx=0.015)
         self.msg_entry.focus()
         self.msg_entry.bind("<Return>", self._on_enter_pressed)
 
         # send button
-        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, width=20, bg=BG_GRAY,
-                             command=lambda: self._on_enter_pressed(None))
+        send_button = Button(bottom_label, text="Send", font=FONT_BOLD, relief=RAISED, width=20, bg="#0f4c75", fg="#bbe1fa", command=lambda: self._on_enter_pressed(None))
         send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
 
     def _on_enter_pressed(self, event):
