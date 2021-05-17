@@ -180,12 +180,21 @@
         "Goodbye",
         "Nice chatting to you, bye",
         "Till next time",
-        "Bye-bye!"
+        "Bye-bye!",
+        "Have a good day",
+        "Thanks and good bye",
+        "Nice chat",
+        "It's been greet",
+        "Thank you, Good bye"
       ],
       "responses": [
         "See you!",
         "Have a nice day",
-        "Bye! Come back again soon."
+        "Bye! Come back again soon.",
+        "Glad i could help, Have a nice day",
+        "See you soon",
+        "Goodbye & have a nice day",
+        "Goodbyr & thanks for visiting ABCBot"
       ],
       "context": [""]
     },
@@ -205,10 +214,12 @@
         "Greate, Thanks"
       ],
       "responses": [
-        "Happy to help you",
+        "Welcome",
         "Any time!",
         "My pleasure",
-        "thank you for choosing ABC campus", "Thaks for cho"
+        "That's what i do",
+        "Nice to here that",
+        "It's my pleasure"
       ],
       "context": [""]
     },
@@ -400,8 +411,8 @@
         "About ABC Institute"
       ],
       "responses": [
-        "ABC institute is one of Sri Lanka largest higher education provider. It has more than 50 branches around Sri Lanka which provide education to over 40000 students over a year. When ABC is starting it only has courses & programmes related to ICT but today ABC provides a diversified educational experience in ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. \n To learn more about ABC Institute visit : \n www/acbin.lk/about/about-abc",
-        "ABC institute is Sri Lankan largest & leading higher educational institutions that provide courses & programmes in the fields of ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. ABC institute has Islandwide branches that help more than 40000 students per year. If you need to know more about ABC institute please visit: \n www/acbin.lk/about/about-abc"
+        "ABC institute is one of Sri Lanka largest higher education provider. It has more than 10 branches around Sri Lanka which provide education to over 10000 students over a year. When ABC is starting it only has courses & programmes related to ICT but today ABC provides a diversified educational experience in ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. \n To learn more about ABC Institute visit : \n www/acbin.lk/about/about-abc",
+        "ABC institute is Sri Lankan largest & leading higher educational institutions that provide courses & programmes in the fields of ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. ABC institute has Islandwide branches that help more than 10000 students per year. If you need to know more about ABC institute please visit: \n www/acbin.lk/about/about-abc"
       ],
       "context": ["institute-management"]
     },
@@ -470,18 +481,69 @@
         ""
       ],
       "responses": [
-        "We are affiliated with \n London Metropolitan University \n Kingston University London \n BCS The Chartered Institute for IT \n Colombo University of Science",
-        "We are partnered up with \n London Metropolitan University \n Kingston University London \n BCS The Chartered Institute for IT \n Colombo University of Science"
+        "We are affiliated with \n London Metropolitan University \n Kingston University London \n BCS The Chartered Institute for IT \n Colombo University of Science \n To learn more baout these affiliated universities visit this link : www/acbin.lk/about/affiliated-universities",
+        "We are partnered up with \n London Metropolitan University \n Kingston University London \n BCS The Chartered Institute for IT \n Colombo University of Science \n To learn more visits : www/acbin.lk/about/affiliated-universities"
       ],
       "context": [""]
     },
     {
-      "tag": "noanswer",
-      "patterns": [""],
+      "tag": "branches",
+      "patterns": [
+        "branches",
+        "what are the branches",
+        "Do you have any branches",
+        "Where are the branches",
+        "University branches",
+        "Where do you are branches",
+        "Need to know about branches you have",
+        "Can i know about branches",
+        "Where can i find your branches",
+        "Where can i find branches"
+      ],
       "responses": [
-        "Sorry, can't understand you",
-        "Please give me more info",
-        "Not sure I understand"
+        "ABC institute have 10 branches arroud Island wide \n Colombo \n Battaramulla \n Batticaloa \n Gampaha \n Galle \n Chilaw \n Panadura \n Kurunegala \n Jaffna \n Kandy \n visit www/acbin.lk/branches to learn more about our branches",
+        "Our branches are \n Colombo Metro Campus \n Battaramulla \n Batticaloa \n Gampaha \n Galle \n Chilaw \n Panadura \n Kurunegala \n Jaffna \n Kandy \n visit www/acbin.lk/branches to fin out more",
+        "Colombo Metro Campus \n Battaramulla \n Batticaloa \n Gampaha \n Galle \n Chilaw \n Panadura \n Kurunegala \n Jaffna \n Kandy visit www/acbin.lk/branches to fin out more"
+      ],
+      "context": ["main-branch"]
+    },
+    {
+      "tag": "main-branch",
+      "patterns": [
+        "main branch",
+        "head branch",
+        "What is the main branch",
+        "tell me about the main branch",
+        "what is the head branch",
+        "headquaters",
+        "Where is the headquaters",
+        "Tell me about the headquaters"
+      ],
+      "responses": [
+        "Our main branch is the colombo branch and it is located in No.03, De Fonseka Place, , Colombo 4",
+        "No.03, De Fonseka Place, , Colombo 4",
+        "Our main branch is the colombo branch"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "branch-contact-details",
+      "patterns": [
+        "contact details of the branch",
+        "What are the contact details of the branch",
+        "contact details",
+        "Contact",
+        "Address",
+        "email",
+        "hotline",
+        "Phone number",
+        "Where can i find the contaxt details",
+        "what are the contact details"
+      ],
+      "responses": [
+        "Our main branch is the colombo branch and it is located in No.03, De Fonseka Place, , Colombo 4",
+        "No.03, De Fonseka Place, , Colombo 4",
+        "Our main branch is the colombo branch"
       ],
       "context": [""]
     }
