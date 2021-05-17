@@ -194,17 +194,19 @@
     {
       "tag": "institute-facilities",
       "patterns": [
-        "Management",
-        "About Management",
-        "Managemnt Team",
-        "Who manage the institute",
-        "Managers",
-        "top people",
-        "Who are the top people"
+        "facilities",
+        "What are the facilities",
+        "institute facilites",
+        "exclusive access",
+        "what are the exclusive access",
+        "facilities student have access to",
+        "benefits",
+        "What are the benefits",
+        "institute benefits"
       ],
       "responses": [
-        "ABC institute is managed by : \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team",
-        "ABC institute is lead by :  \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team"
+        "All the students will have exclusive access to our \n Fully Stocked Library \n Computer Labs \n Smulation Labs \n Canteen \n Recreatoonal Facilites \n Online Learning Platform",
+        "All the students can use the top level facilities like \n Fully Stocked Library \n Computer Labs \n Smulation Labs \n Canteen \n Recreatoonal Facilites \n Online Learning Platform"
       ],
       "context": [""]
     }
