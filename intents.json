@@ -89,7 +89,7 @@
       "context": [""]
     },
     {
-      "tag": "grettings",
+      "tag": "greeting",
       "patterns": [
         "Hi",
         "Hello",
@@ -138,75 +138,226 @@
       "context": [""]
     },
     {
-      "tag": "about-bot",
+      "tag": "night",
       "patterns": [
-        "Who are you?",
-        "What can you do?",
-        "What do you do?",
-        "What do you know?",
-        "How can you help me?",
-        "What can you tell me?",
-        "What is ABCBot?",
-        "ABCbot"
+        "Good night",
+        "night",
+        "Very good night!",
+        "Good night ABCBot",
+        "Very good night ABCBot",
+        "night ABCBot",
+        "Have a good night",
+        "Good night & thanks for the support",
+        "night & thanks for the support",
+        "Very good night & thanks for the support",
+        "Good night and thanks for the help",
+        "Very good night & thanks for the help",
+        "night & thanks for the help",
+        "Thanks for the support. Have a good night",
+        "Thanks for the support. Very good night for you",
+        "Thanks for the help. Have a good night",
+        "Thanks for the help. Very good night for you"
       ],
       "responses": [
-        "I am ABCBot & have programmed to answer the questions provided by the user related to the ABC Institute",
-        "I am ABCBot. I have designed to answers the question that is provide by the users related to the ABC Institute"
+        "Good night! I am glad that I could help you",
+        "Night! I am glad that I could help you",
+        "Very good night! I am glad that I could help you",
+        "Good night! hope to see you soon",
+        "Very good night! hope to see you soon",
+        "Night! hope to see you soon",
+        "I am glad that I could help you. Have a good night",
+        "I am glad that I could help you. Have a very good night",
+        "I am glad that I could assist you. Have a good night",
+        "I am glad that I could assist you. Have a very good night"
       ],
       "context": [""]
     },
     {
-      "tag": "about-abc-institute",
+      "tag": "goodbye",
       "patterns": [
-        "What is ABC institute?",
-        "ABC Institute",
-        "Why ABC Institute?",
-        "Tell me about ABC Institute?",
-        "What ca you tell about ABC Institute?",
-        "What do you know about ABC Institute?",
-        "Do you know about ABC Institute?",
-        "Do you know  ABC Institute?",
-        "About ABC Institute"
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Nice chatting to you, bye",
+        "Till next time",
+        "Bye-bye!"
       ],
       "responses": [
-        "ABC institute is one of Sri Lanka largest higher education provider. It has more than 50 branches around Sri Lanka which provide education to over 40000 students over a year. When ABC is starting it only has courses & programmes related to ICT but today ABC provides a diversified educational experience in ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. \n To learn more about ABC Institute visit : \n www/acbin.lk/about/about-abc",
-        "ABC institute is Sri Lankan largest & leading higher educational institutions that provide courses & programmes in the fields of ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. ABC institute has Islandwide branches that help more than 40000 students per year. If you need to know more about ABC institute please visit: \n www/acbin.lk/about/about-abc"
-      ],
-      "context": ["institute-management"]
-    },
-    {
-      "tag": "institute-management",
-      "patterns": [
-        "Management",
-        "About Management",
-        "Managemnt Team",
-        "Who manage the institute",
-        "Managers",
-        "top people",
-        "Who are the top people"
-      ],
-      "responses": [
-        "ABC institute is managed by : \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team",
-        "ABC institute is lead by :  \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team"
+        "See you!",
+        "Have a nice day",
+        "Bye! Come back again soon."
       ],
       "context": [""]
     },
     {
-      "tag": "institute-facilities",
+      "tag": "thanks",
       "patterns": [
-        "facilities",
-        "What are the facilities",
-        "institute facilites",
-        "exclusive access",
-        "what are the exclusive access",
-        "facilities student have access to",
-        "benefits",
-        "What are the benefits",
-        "institute benefits"
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Awesome, thanks",
+        "Thanks for helping me"
       ],
       "responses": [
-        "All the students will have exclusive access to our \n Fully Stocked Library \n Computer Labs \n Smulation Labs \n Canteen \n Recreatoonal Facilites \n Online Learning Platform",
-        "All the students can use the top level facilities like \n Fully Stocked Library \n Computer Labs \n Smulation Labs \n Canteen \n Recreatoonal Facilites \n Online Learning Platform"
+        "Happy to help!",
+        "Any time!",
+        "My pleasure",
+        "thank you for choosing ABC campus"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [""],
+      "responses": [
+        "Sorry, can't understand you",
+        "Please give me more info",
+        "Not sure I understand",
+        "I didn't get that. Can you say it again?",
+        "I missed what you said. What was that?",
+        "Sorry, could you say that again?",
+        "Sorry, can you say that again?",
+        "Can you say that again?",
+        "Sorry, I didn't get that. Can you rephrase?",
+        "Sorry, what was that?",
+        "One more time?",
+        "What was that?",
+        "Say that one more time?",
+        "I didn't get that. Can you repeat?",
+        "I missed that, say that again?"
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "options",
+      "patterns": [
+        "How you could help me?",
+        "What you can do?",
+        "What help you provide?",
+        "How you can be helpful?",
+        "What support is offered"
+      ],
+      "responses": [
+        "I can guide you through   1.Course Details   2.Course Registration     3.Payment facilities    4.Contact & Branch Information "
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Course-registration",
+      "patterns": [
+        "What is the procedure of application?",
+        "How do I apply?",
+        "Is there a possibility to change the courses I have registered on a later date?",
+        "When will registering of New students happen",
+        "When is the registration deadline ?",
+        "When can I register ?",
+        "Register for a course",
+        "Course registration",
+        "How can I register for courses?"
+      ],
+      "responses": [
+        "You can Register via Online or By visiting the nearest ABC Campus, What do You prefer?"
+      ],
+      "context": ["Course-registration-online", "Course-registration-physical"]
+    },
+    {
+      "tag": "Course-registration-online",
+      "patterns": [
+        "How do I apply online?",
+        "Apply online",
+        "Online application",
+        "Online registration deadline?",
+        "How can I register online?",
+        "Online registration"
+      ],
+      "responses": [
+        "Visit -www.ABCcampus.lk/courses/registration- to Register to your preferred course via online "
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Course-registration-physical",
+      "patterns": [
+        "on campus registration",
+        "Physical registration",
+        "Register by visiting campus"
+      ],
+      "responses": [
+        "On campus registration are open for students from 10am to 4pm on every working day. Please visit the nearest campus to start following your dream."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "payment-methods",
+      "patterns": [
+        "Pay",
+        "payment",
+        "how ca I pay?",
+        "What are the types of banks available for bank account transfer?",
+        "Do you accept debit cards?",
+        "Do you accept credit cards?",
+        "Can I pay on an annual basis?",
+        "Is money refunded after payment if a problem occurs?",
+        "I have an foreign credit card, is foreign credit card payments acceptable?",
+        "What are the payment options available?",
+        "What are the payment methods?"
+      ],
+      "responses": [
+        "You can make your payment Online Or by visiting Our Nearest ABC Campus. What do you prefer?"
+      ],
+      "context": ["payment-methods-online", "payment-methods-physical"]
+    },
+    {
+      "tag": "payment-methods-online",
+      "patterns": [
+        " pay online",
+        "What are the online payment methods?",
+        "Is there a specific page to make payments?",
+        "online payment"
+      ],
+      "responses": [
+        "You can pay the relevant amount by Visa/Master Debit or Credit card by simply visiting -www.ABCcampus.lk/payments- .  "
+      ],
+      "context": [""]
+    },
+
+    {
+      "tag": "payment-methods-physical",
+      "patterns": ["on campus payments", "physical payments"],
+      "responses": [
+        "On campus Payment option is open for students from 10am to 4pm on every working day. Students can pay the relevant amount by Cash or Debit & Credit cards."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Contact",
+      "patterns": [
+        "Telephone number",
+        "Get details about the university",
+        "Do you have a website?",
+        "How can I contact you?",
+        "Email address",
+        "Contact number",
+        "How can I contact the university?"
+      ],
+      "responses": [
+        "Contact ABC campus Via TELE: 0777000000  EMAIL: contact@ABCcampus.lk  or visit www.ABCcampus.lk"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "Locations",
+      "patterns": [
+        "Locations",
+        "Is there a branch in..",
+        "Address",
+        "What is the nearest branch?",
+        "Where can I study my course?",
+        "Where are the branches located?"
+      ],
+      "responses": [
+        "There are more than 100 locations around the country, including Colombo, Kandy, Gampaha & Badulla. To get the nearest ABC campus location please visit -www.ABCcampus.lk/branches-"
       ],
       "context": [""]
     }
