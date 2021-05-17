@@ -169,7 +169,42 @@
         "About ABC Institute"
       ],
       "responses": [
-        "ABC institute is one of Sri Lanka largest higher education provider. It has more than 50 branches around Sri Lanka which provide education to over 40000 students over a year. When ABC is starting it only has courses & programmes related to ICT but today ABC provides a diversified educational experience in ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. \n To learn more about ABC Institute visit : \n www/acbin.lk/about/about-abc"
+        "ABC institute is one of Sri Lanka largest higher education provider. It has more than 50 branches around Sri Lanka which provide education to over 40000 students over a year. When ABC is starting it only has courses & programmes related to ICT but today ABC provides a diversified educational experience in ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. \n To learn more about ABC Institute visit : \n www/acbin.lk/about/about-abc",
+        "ABC institute is Sri Lankan largest & leading higher educational institutions that provide courses & programmes in the fields of ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. ABC institute has Islandwide branches that help more than 40000 students per year. If you need to know more about ABC institute please visit: \n www/acbin.lk/about/about-abc"
+      ],
+      "context": ["institute-management"]
+    },
+    {
+      "tag": "institute-management",
+      "patterns": [
+        "Management",
+        "About Management",
+        "Managemnt Team",
+        "Who manage the institute",
+        "Managers",
+        "top people",
+        "Who are the top people"
+      ],
+      "responses": [
+        "ABC institute is managed by : \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team",
+        "ABC institute is lead by :  \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "institute-facilities",
+      "patterns": [
+        "Management",
+        "About Management",
+        "Managemnt Team",
+        "Who manage the institute",
+        "Managers",
+        "top people",
+        "Who are the top people"
+      ],
+      "responses": [
+        "ABC institute is managed by : \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team",
+        "ABC institute is lead by :  \n Dr. Nimal Kodikarge (Chairman/Managing Director) \n Dr. Anial Aponsu (Dean - ABC institute) \n Pleas visit to learn more : www/acbin.lk/about/management-team"
       ],
       "context": [""]
     }
