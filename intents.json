@@ -256,7 +256,7 @@
         "What support is offered"
       ],
       "responses": [
-        "I can guide you through   1.Course Details   2.Course Registration     3.Payment facilities    4.Contact & Branch Information "
+        "I can guide you through \n 1.Course Details \n 2.Course Registration \n 3.Payment facilities \n 4.Contact & Branch Information "
       ],
       "context": [""]
     },
@@ -289,7 +289,7 @@
         "Online registration"
       ],
       "responses": [
-        "Visit -www.ABCcampus.lk/courses/registration- to Register to your preferred course via online "
+        "Visit www/acbin.lk/courses/registration- to Register to your preferred course via online "
       ],
       "context": [""]
     },
@@ -334,7 +334,7 @@
         "online payment"
       ],
       "responses": [
-        "You can pay the relevant amount by Visa/Master Debit or Credit card by simply visiting -www.ABCcampus.lk/payments- .  "
+        "You can pay the relevant amount by Visa/Master Debit or Credit card by simply visiting www/acbin.lk/payments- .  "
       ],
       "context": [""]
     },
@@ -344,22 +344,6 @@
       "patterns": ["on campus payments", "physical payments"],
       "responses": [
         "On campus Payment option is open for students from 10am to 4pm on every working day. Students can pay the relevant amount by Cash or Debit & Credit cards."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "Contact",
-      "patterns": [
-        "Telephone number",
-        "Get details about the university",
-        "Do you have a website?",
-        "How can I contact you?",
-        "Email address",
-        "Contact number",
-        "How can I contact the university?"
-      ],
-      "responses": [
-        "Contact ABC campus Via TELE: 0777000000  EMAIL: contact@ABCcampus.lk  or visit www.ABCcampus.lk"
       ],
       "context": [""]
     },
@@ -374,7 +358,7 @@
         "Where are the branches located?"
       ],
       "responses": [
-        "There are more than 100 locations around the country, including Colombo, Kandy, Gampaha & Badulla. To get the nearest ABC campus location please visit -www.ABCcampus.lk/branches-"
+        "There are more than 100 locations around the country, including Colombo, Kandy, Gampaha & Badulla. To get the nearest ABC campus location please visit www/acbin.lk/branches-"
       ],
       "context": [""]
     },
@@ -541,9 +525,8 @@
         "what are the contact details"
       ],
       "responses": [
-        "Our main branch is the colombo branch and it is located in No.03, De Fonseka Place, , Colombo 4",
-        "No.03, De Fonseka Place, , Colombo 4",
-        "Our main branch is the colombo branch"
+        "Here is the contact details for our main branch \n Address: No.03, De Fonseka Place, , Colombo 4 \n Telephone: 011 7572572 \n E-mail: abc@info.com \n to find out contact details of other branchec please visit www/acbin.lk/branches",
+        "Here are the contact details and address of the main branch \n Address: No.03, De Fonseka Place, , Colombo 4 \n Telephone: 011 7572572 \n E-mail: abc@info.com \n to find out contact details of other branchec please visit www/acbin.lk/branches"
       ],
       "context": [""]
     }
