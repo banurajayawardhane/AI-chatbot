@@ -93,7 +93,7 @@ class ChatApplication:
         line.place(relwidth=1, rely=0.07, relheight=0.1)
 
         # text widget
-        self.text_widget = Text(self.window, width=20, height=2, bg="#1b262c", fg="#bbe1fa",font=FONT, padx=10, pady=15, bd=0)
+        self.text_widget = Text(self.window, width=20, height=2, bg="#2c3b42", fg="#bbe1fa",font=FONT, padx=10, pady=15, bd=0)
         self.text_widget.place(relheight=0.90, relwidth=1, rely=0.075)
         self.text_widget.configure(cursor="arrow", state=DISABLED)
 
@@ -120,12 +120,12 @@ class ChatApplication:
             return
 
         self.msg_entry.delete(0, END)
-        msg1 = f"{sender}: {msg}\n\n"
+        msg1 = f"{sender} :\n {msg}\n\n"
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg1)
         self.text_widget.configure(state=DISABLED)
 
-        msg2 = f"ABC Bot : {chatbot_response(msg)}\n\n"
+        msg2 = f"ABC Bot :\n {chatbot_response(msg)}\n\n"
         self.text_widget.configure(state=NORMAL)
         self.text_widget.insert(END, msg2)
         self.text_widget.configure(state=DISABLED)

@@ -1,87 +1,177 @@
-{"intents": [
- {"tag": "morning",
-  "patterns": ["Good morning","morning","Very good morning", "Good morning to you", "Hello good monring", "Hi good morning", "Goog monrning is any one there?", "morning is anyone there?"],
-  "responses": ["Good morning how can I help you?", "Good morning what can i do for you?", "Hi there, how can I help?", "Hi there, What can I do for you?", "Hi there, Good morning! what can I do for you ?", "Hi there, Good morning! How can I help you?"],
-  "context": [""]
- },
- {"tag": "evening",
-  "patterns": ["Good evening","evening", "Very good evening", ""],
-  "responses": ["Good evening","Good evening! how can i help you in this pleasant evening"],
-  "context": [""]
- },
- {"tag": "greeting",
-  "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","What's up", "Hello"],
-  "responses": ["Hello! Welcome to ABC Campus","Good to see you again", "Hi there, how can I help?"],
-  "context": [""]
- },
-  {"tag": "night",
-   "patterns": ["Good night","night"],
-   "responses": ["Good night! glad i","Good night! hope to see you soon"],
-   "context": [""]
-  },
-  {"tag": "goodbye",
-   "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time", "Bye-bye!"],
-   "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-   "context": [""]
-  },
-  {"tag": "thanks",
-   "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-   "responses": ["Happy to help!", "Any time!", "My pleasure","thank you for choosing ABC campus"],
-   "context": [""]
-  },
-  {"tag": "noanswer",
-   "patterns": [""],
-   "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-   "context": [""]
-  },
-
-  {"tag": "options",
-   "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-   "responses": ["I can guide you through   1.Course Details   2.Course Registration     3.Payment facilities    4.Contact & Branch Information "],
-   "context": [""]
-  },
-  {"tag": "Course-registration",
-   "patterns": ["What is the procedure of application?", "How do I apply?", "Is there a possibility to change the courses I have registered on a later date?", "When will registering of New students happen", "When is the registration deadline ?","When can I register ?","Register for a course","Course registration","How can I register for courses?"],
-   "responses": ["You can Register via Online or By visiting the nearest ABC Campus, What do You prefer?"],
-   "context": ["Course-registration-online", "Course-registration-physical"]
-  },
-  {"tag": "Course-registration-online",
-   "patterns": ["How do I apply online?", "Apply online", "Online application", "Online registration deadline?", "How can I register online?", "Online registration" ],
-   "responses": ["Visit -www.ABCcampus.lk/courses/registration- to Register to your preferred course via online "],
-   "context": [""]
-  },
-  {"tag": "Course-registration-physical",
-   "patterns": ["on campus registration", "Physical registration", "Register by visiting campus" ],
-   "responses": ["On campus registration are open for students from 10am to 4pm on every working day. Please visit the nearest campus to start following your dream."],
-   "context": [""]
-  },
-  {"tag": "payment-methods",
-   "patterns": ["Pay","payment","how ca I pay?","What are the types of banks available for bank account transfer?","Do you accept debit cards?","Do you accept credit cards?","Can I pay on an annual basis?","Is money refunded after payment if a problem occurs?","I have an foreign credit card, is foreign credit card payments acceptable?","What are the payment options available?","What are the payment methods?"],
-   "responses": ["You can make your payment Online Or by visiting Our Nearest ABC Campus. What do you prefer?"],
-   "context": ["payment-methods-online","payment-methods-physical"]
-  },
-  {"tag": "payment-methods-online",
-   "patterns": [" pay online", "What are the online payment methods?", "Is there a specific page to make payments?", "online payment" ],
-   "responses": ["You can pay the relevant amount by Visa/Master Debit or Credit card by simply visiting -www.ABCcampus.lk/payments- .  "],
-   "context": [""]
-  },
-
-
-        {"tag": "payment-methods-physical",
-         "patterns": ["on campus payments","physical payments"],
-         "responses": ["On campus Payment option is open for students from 10am to 4pm on every working day. Students can pay the relevant amount by Cash or Debit & Credit cards."],
-         "context": [""]
-        },
-        {"tag": "Contact",
-         "patterns": ["Telephone number", "Get details about the university", "Do you have a website?", "How can I contact you?", "Email address","Contact number","How can I contact the university?" ],
-         "responses": ["Contact ABC campus Via TELE: 0777000000  EMAIL: contact@ABCcampus.lk  or visit www.ABCcampus.lk"],
-         "context": [""]
-        },
-        {"tag": "Locations",
-         "patterns": ["Locations","Is there a branch in..","Address","What is the nearest branch?","Where can I study my course?","Where are the branches located?"],
-         "responses": ["There are more than 100 locations around the country, including Colombo, Kandy, Gampaha & Badulla. To get the nearest ABC campus location please visit -www.ABCcampus.lk/branches-"],
-         "context": [""]
-        }
-
-   ]
+{
+  "intents": [
+    {
+      "tag": "morning",
+      "patterns": [
+        "Good morning",
+        "morning",
+        "Very good morning",
+        "Hi, good morning",
+        "Hello, good morning",
+        "Hi, morning",
+        "Hello, morning",
+        "Hi, very good morning",
+        "Hello, very good morning",
+        "Good morning! Is anyone there?",
+        "Morning! Is anyone there?",
+        "Very good morning! Is anyone there?",
+        "Hi, Good morning! Is anyone there?",
+        "Hello, Good morning! Is anyone there?",
+        "Hi, morning! Is anyone there?",
+        "Hello, morning! Is anyone there?",
+        "Hi, Very good morning! Is anyone there?",
+        "Hello, Very good morning! Is anyone there?"
+      ],
+      "responses": [
+        "Good morning! I am ABCBot. how can I help you today?",
+        "Morning! I am ABCBot. how can I help you today?",
+        "Very good morning! I am ABCBot. how can I help you today?",
+        "Good morning! I am ABCBot. how can I help you?",
+        "Morning! I am ABCBot. how can I help you today?",
+        "Very good morning! I am ABCBot. how can I help you?",
+        "Good morning! I am ABCBot. what can i do for you today?",
+        "Morning! I am ABCBot. what can i do for you today?",
+        "Very good morning! I am ABCBot. what can i do for you today?",
+        "Good morning! I am ABCBot. what can i do for you?",
+        "Morning! I am ABCBot. what can i do for you?",
+        "Very good morning! I am ABCBot. what can i do for you?",
+        "Good morning! I am ABCBot. How can i help you in this pleasant morning?",
+        "Morning! I am ABCBot. How can i help you in this pleasant morning?",
+        "Very good morning! I am ABCBot. How can i help you in this pleasant morning?",
+        "Good morning! I am ABCBot. What can i do for you in this pleasant morning?",
+        "Morning! I am ABCBot. What can i do for you in this pleasant morning?",
+        "Very good morning! I am ABCBot. What can i do for you in this pleasant morning?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "evening",
+      "patterns": [
+        "Good evening",
+        "evening",
+        "Very good evening",
+        "Hi, good evening",
+        "Hello, good evening",
+        "Hi, evening",
+        "Hello, evening",
+        "Hi, very good evening",
+        "Hello, very good evening",
+        "Good evening! Is anyone there?",
+        "evening! Is anyone there?",
+        "Very good evening! Is anyone there?",
+        "Hi, Good evening! Is anyone there?",
+        "Hello, Good evening! Is anyone there?",
+        "Hi, evening! Is anyone there?",
+        "Hello, evening! Is anyone there?",
+        "Hi, Very good evening! Is anyone there?",
+        "Hello, Very good evening! Is anyone there?"
+      ],
+      "responses": [
+        "Good evening! I am ABCBot. how can I help you today?",
+        "evening! I am ABCBot. how can I help you today?",
+        "Very good evening! I am ABCBot. how can I help you today?",
+        "Good evening! I am ABCBot. how can I help you?",
+        "evening! I am ABCBot. how can I help you today?",
+        "Very good evening! I am ABCBot. how can I help you?",
+        "Good evening! I am ABCBot. what can i do for you today?",
+        "evening! I am ABCBot. what can i do for you today?",
+        "Very good evening! I am ABCBot. what can i do for you today?",
+        "Good evening! I am ABCBot. what can i do for you?",
+        "evening! I am ABCBot. what can i do for you?",
+        "Very good evening! I am ABCBot. what can i do for you?",
+        "Good evening! I am ABCBot. How can i help you in this pleasant evening?",
+        "evening! I am ABCBot. How can i help you in this pleasant evening?",
+        "Very good evening! I am ABCBot. How can i help you in this pleasant evening?",
+        "Good evening! I am ABCBot. What can i do for you in this pleasant evening?",
+        "evening! I am ABCBot. What can i do for you in this pleasant evening?",
+        "Very good evening! I am ABCBot. What can i do for you in this pleasant evening?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "grettings",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Hi, there",
+        "Hello, there",
+        "Hey, there",
+        "Is anyone there?",
+        "Is anybody there?",
+        "Hi, ABCBot",
+        "Hello, ABCBot",
+        "Hey, ABCBot",
+        "Hi, ABC Institute",
+        "Hello, ABC Institute",
+        "Hey, ABC Institute",
+        "Hi, Is anyone there?",
+        "Hello, Is anyone there?",
+        "Hey, Is anyone there?",
+        "Hi, Is anybody there?",
+        "Hello, Is anybody there?",
+        "Hey, Is anybody there?",
+        "Hi, I need support?",
+        "Hello, I need support?",
+        "Hey, I need support?"
+      ],
+      "responses": [
+        "Hi, I am ABCBot. how can I help you today?",
+        "Hello, I am ABCBot. how can I help you today?",
+        "Hey, I am ABCBot. how can I help you today?",
+        "Hi, I am ABCBot. What can i do for you today?",
+        "Hello, I am ABCBot. What can i do for you today?",
+        "Hey, I am ABCBot. What can i do for you today?",
+        "Hi, I am ABCBot. how can I help you?",
+        "Hello, I am ABCBot. how can I help you?",
+        "Hey, I am ABCBot. how can I help you?",
+        "Hi, I am ABCBot. What can i do for you?",
+        "Hello, I am ABCBot. What can i do for you?",
+        "Hey, I am ABCBot. What can i do for you?",
+        "Hi, I am ABCBot. I am here to help you",
+        "Hello, I am ABCBot. I am here to help you",
+        "Hey, I am ABCBot. I am here to help you",
+        "Hi! How can I assist you in this pleasant day",
+        "Hello! How can I assist you in this pleasant day",
+        "Hey! How can I assist you in this pleasant day"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "about-bot",
+      "patterns": [
+        "Who are you?",
+        "What can you do?",
+        "What do you do?",
+        "What do you know?",
+        "How can you help me?",
+        "What can you tell me?",
+        "What is ABCBot?",
+        "ABCbot"
+      ],
+      "responses": [
+        "I am ABCBot & have programmed to answer the questions provided by the user related to the ABC Institute",
+        "I am ABCBot. I have designed to answers the question that is provide by the users related to the ABC Institute"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "about-abc-institute",
+      "patterns": [
+        "What is ABC institute?",
+        "ABC Institute",
+        "Why ABC Institute?",
+        "Tell me about ABC Institute?",
+        "What ca you tell about ABC Institute?",
+        "What do you know about ABC Institute?",
+        "Do you know about ABC Institute?",
+        "Do you know  ABC Institute?",
+        "About ABC Institute"
+      ],
+      "responses": [
+        "ABC institute is one of Sri Lanka largest higher education provider. It has more than 50 branches around Sri Lanka which provide education to over 40000 students over a year. When ABC is starting it only has courses & programmes related to ICT but today ABC provides a diversified educational experience in ICT & Computing, Business Management, Hospitality Management, Engineering, Personal & Professional Development, Language Training and Corporate Training. \n To learn more about ABC Institute visit : \n www/acbin.lk/about/about-abc"
+      ],
+      "context": [""]
+    }
+  ]
 }
